@@ -20,12 +20,8 @@ pytest.ini,e/a/ea898f73cf4daab2e41a2c710093f364ce6a7d1b
 +test_UI/test_ui_search_add_delete_basket.py,e/5/e546752fd91cfeaceff962d7ff0920759f749d24
 I
 test_API/configuration.py,d/d/dd24abd815574b575601e4d553d920e8cd3cea77
-D
-test_API/conftest.py,3/7/373bdf9eb1c0f79c65c3276857ecae75a8fd62e3
 X
 (test_API/test_api_validation_response.py,3/3/33dfc6a8cb715c08eeb49dcb540863c6f2ff347f
-C
-test_UI/conftest.py,3/9/399cb66ccd799031f6cd47f8cdf4a2f254441eed
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302

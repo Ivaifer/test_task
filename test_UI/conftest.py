@@ -1,20 +1,22 @@
 import pytest
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 
 
-
+def pytest_addoption(parser):
+    parser.addoption('--browser_name', action='store', default='chrome',
+                     help='Choose browser: chrome or firefox')
 
 
 @pytest.fixture
 def driver(request):
-    options = Options()
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-gpu')
-    options.add_argument('--disable-dev-shm-usage')
-    options.add_argument('--headless')
-    options.add_argument('--start-maximized')
-    driver = webdriver.Chrome(options=options)
+    browser_name = request.config.getoption('browser_name')
+    if browser_name == "chrome":
+        driver = webdriver.Chrome()
+    elif browser_name == "firefox":
+        driver = webdriver.Firefox()
+    else:
+        raise pytest.UsageError('--browser_name should be chrome or firefox')
     driver.implicitly_wait(10)
+    driver.set_window_size(1920, 1080)
     yield driver
     driver.quit()
