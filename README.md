@@ -35,8 +35,7 @@ https://yandex.ru/dev/rasp/doc/ru/reference/query-nearest-station
 ● При этом массив schedule должен содержать объект thread в котором имеются  
 следующие не пустые элементы: number (строка), title (строка), uid (строка).
 ____
-### Технологии:
-python==3.11  
+### Технологии: 
 pytest==8.0.2  
 python-dotenv==1.0.1  
 requests==2.31.0  
