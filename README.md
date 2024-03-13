@@ -60,12 +60,12 @@ API_KEY={your_api_key}
 Для ui тестов c выбором браузера (по умаолчанию chrome):
 
 ```
-pytest -s -v ui --browser_name=chrome
-pytest -s -v ui --browser_name=firefox
+pytest -s -v -m ui --browser_name=chrome
+pytest -s -v -m ui --browser_name=firefox
 ```
 Для api тестов
 
 ```
-pytest -s -v api 
+pytest -s -v -m api 
 ```
 
